@@ -2,18 +2,24 @@
 //6개의 공을 꺼냈을 때 나오는 프로그램을 만들어보세요.
 //중복되지 않게 숫자가 나오게 만들어야 합니다.
 
-#include<iostream>
+#include <iostream>
+#include <ctime>
 
 using namespace std;
 
 int main()
 {
-	int Ball[45] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45};
+	int Ball[6];
+	int num = 0;
 
+	srand(time(NULL));
 
-
-	
-
+	for (int i = 0; i < 6; i++) 
+	{
+		int num = rand() % (46);
+		Ball[i] = num;
+		cout << Ball[i] << endl;
+	}
 
 	return 0;
 }
